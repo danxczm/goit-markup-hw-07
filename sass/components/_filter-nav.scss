@@ -1,0 +1,33 @@
+.filter-nav-list {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.filter-nav-item:not(:last-child) {
+	margin-right: 8px;
+}
+
+.filter-nav-buttons {
+	padding: 6px 22px;
+	background-color: var(--secondary-bg-color);
+	color: var(--primary-text-color);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.62;
+	letter-spacing: 0.03em;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+
+	transition: color 250ms var(--cubic-value), background-color 250ms var(--cubic-value),
+		box-shadow 250ms var(--cubic-value);
+
+	&:hover,
+	&:focus {
+		background-color: var(--accent-color);
+		color: var(--white-text-color);
+		box-shadow: var(--hover-shadow);
+	}
+}
+

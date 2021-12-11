@@ -1,0 +1,141 @@
+.site-logo {
+	margin-right: 93px;
+	
+	color: var(--accent-color);
+	font-family: Raleway, sans-serif;
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 1.19;
+	letter-spacing: 0.03em;
+}
+
+.site-logo-footer {
+	color: var(--accent-color);
+	font-family: Raleway, sans-serif;
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 1.19;
+	letter-spacing: 0.03em;
+}
+
+.logo-second-half {
+	color: var(--primary-text-color);
+}
+
+.nav-header {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #ececec;
+}
+
+.nav-container {
+	display: flex;
+	align-items: center;
+}
+
+.site-nav {
+	display: flex;
+	align-items: center;
+}
+
+.site-nav-list {
+	display: flex;
+}
+
+.site-nav-item:not(:last-child) {
+	margin-right: 50px;
+}
+
+.site-nav-link {
+	position: relative;
+	display: block;
+
+	padding-top: 32px;
+	padding-bottom: 32px;
+
+	color: var(--primary-text-color);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+
+	transition: color 250ms var(--cubic-value);
+
+	&::after {
+		position: absolute;
+		display: block;
+		bottom: -1px;
+	
+		content: "";
+		width: 100%;
+		height: 4px;
+		background-color: var(--accent-color);
+		border-radius: 2px;
+	
+		transform: scaleX(0);
+		transition: transform 250ms var(--cubic-value);
+		transform-origin: left center;
+	}
+
+	&:hover::after,
+	&:focus::after {
+		transform: scaleX(1);
+	}
+
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
+}
+
+.current {
+	position: relative;
+	color: var(--accent-color);
+	
+	&::before {
+		position: absolute;
+		display: block;
+		bottom: -1px;
+	
+		content: "";
+		width: 100%;
+		height: 4px;
+		background-color: var(--accent-color);
+		border-radius: 2px;
+	}
+}
+
+.contacts-item:not(:first-child) {
+	margin-left: 50px;
+}
+
+.contacts-link {
+	display: flex;
+	align-items: center;
+
+	padding-top: 32px;
+	padding-bottom: 32px;
+
+	color: var(--secondary-text-color);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+
+	transition: color 250ms var(--cubic-value);
+
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
+}
+
+.contacts-list {
+	display: flex;
+	margin-left: auto;
+}
+
+.contacts-icon {
+	margin-right: 10px;
+	fill: currentColor;
+}
