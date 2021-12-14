@@ -1,21 +1,21 @@
-.filter-nav-list {
-	display: flex;
-	justify-content: center;
+.filter-nav--bottom-margin {
 	margin-bottom: 50px;
 }
 
-.filter-nav-item:not(:last-child) {
+.filter-nav__list {
+	display: flex;
+	justify-content: center;
+}
+
+.filter-nav__item:not(:last-child) {
 	margin-right: 8px;
 }
 
-.filter-nav-buttons {
+.filter-nav__buttons {
 	padding: 6px 22px;
 	background-color: var(--secondary-bg-color);
 	color: var(--primary-text-color);
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 1.62;
-	letter-spacing: 0.03em;
+	@include fonts(500, 16px, 1.62, 0.03em);
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;

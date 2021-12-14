@@ -1,29 +1,25 @@
-.clients-title {
+.clients__title {
 	margin-bottom: 50px;
 
 	color: var(--primary-text-color);
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 1.16;
+	@include fonts(700, 36px, 1.16, 0.03em);
 	text-align: center;
-	letter-spacing: 0.03em;
 }
 
-.clients-list {
+.clients__list {
 	display: flex;
 }
 
-.clients-item:not(:first-child) {
+.clients__item:not(:first-child) {
 	margin-left: 30px;
 }
 
-.clients-link {
+.clients__link {
+	@extend %stance-list;
+	
 	width: 170px;
 	height: 92px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
+	
 	border: 1px solid var(--icons-color);
 	border-radius: 4px;
 	color: var(--icons-color);
@@ -37,7 +33,7 @@
 	}
 }
 
-.clients-icon {
+.clients__icon {
 	fill: currentColor;
 }
 

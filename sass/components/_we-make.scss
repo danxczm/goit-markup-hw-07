@@ -1,8 +1,8 @@
-.we-make-list {
+.we-make__list {
 	display: flex;
 }
 
-.we-make-item {
+.we-make__item {
 	position: relative;
 
 	&:not(:last-child) {
@@ -10,33 +10,25 @@
 	}
 }
 
-.we-make-title {
+.we-make__title {
 	margin-bottom: 50px;
 	color: var(--primary-text-color);
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 1.16;
+	@include fonts(700, 36px, 1.16, 0.03em);
 	text-align: center;
-	letter-spacing: 0.03em;
 }
 
-.we-make-description {
+.we-make__description {
 	position: absolute;
 	bottom: 0;
 	right: 0;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@extend %stance-list;
 
 	width: 370px;
 	height: 70px;
 
 	background-color: rgba(47, 48, 58, 0.8);
 	color: var(--white-text-color);
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 1.14;
-	letter-spacing: 0.03em;
+	@include fonts(700, 14px, 1.14, 0.03em);
 	text-transform: uppercase;
 }

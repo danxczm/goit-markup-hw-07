@@ -1,52 +1,43 @@
-.site-logo {
-	margin-right: 93px;
-	
-	color: var(--accent-color);
-	font-family: Raleway, sans-serif;
-	font-size: 26px;
-	font-weight: 700;
-	line-height: 1.19;
-	letter-spacing: 0.03em;
-}
 
-.site-logo-footer {
-	color: var(--accent-color);
-	font-family: Raleway, sans-serif;
-	font-size: 26px;
-	font-weight: 700;
-	line-height: 1.19;
-	letter-spacing: 0.03em;
-}
-
-.logo-second-half {
-	color: var(--primary-text-color);
-}
-
-.nav-header {
+.header {
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #ececec;
 }
 
-.nav-container {
+.header__wrap {
 	display: flex;
 	align-items: center;
 }
 
-.site-nav {
+.header__navigation {
 	display: flex;
 	align-items: center;
 }
 
-.site-nav-list {
+.header-logo--margin-right {
+	margin-right: 93px;
+}
+
+.header-logo {
+	color: var(--accent-color);
+	font-family: Raleway, sans-serif;
+	@include fonts(700, 26px, 1.19, 0.03em);
+}
+
+.header-logo--black-half {
+	color: #000000;
+}
+
+.header__list {
 	display: flex;
 }
 
-.site-nav-item:not(:last-child) {
+.header__item:not(:last-child) {
 	margin-right: 50px;
 }
 
-.site-nav-link {
+.header__link {
 	position: relative;
 	display: block;
 
@@ -54,10 +45,7 @@
 	padding-bottom: 32px;
 
 	color: var(--primary-text-color);
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.14;
-	letter-spacing: 0.02em;
+	@include fonts(500, 14px, 1.14, 0.02em);
 
 	transition: color 250ms var(--cubic-value);
 
@@ -96,7 +84,7 @@
 		position: absolute;
 		display: block;
 		bottom: -1px;
-	
+		
 		content: "";
 		width: 100%;
 		height: 4px;
@@ -105,11 +93,16 @@
 	}
 }
 
-.contacts-item:not(:first-child) {
+.header-contacts__list {
+	display: flex;
+	margin-left: auto;
+}
+
+.header-contacts__item:not(:first-child) {
 	margin-left: 50px;
 }
 
-.contacts-link {
+.header-contacts__link {
 	display: flex;
 	align-items: center;
 
@@ -117,10 +110,7 @@
 	padding-bottom: 32px;
 
 	color: var(--secondary-text-color);
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.14;
-	letter-spacing: 0.02em;
+	@include fonts(500, 14px, 1.14, 0.02em);
 
 	transition: color 250ms var(--cubic-value);
 
@@ -130,12 +120,7 @@
 	}
 }
 
-.contacts-list {
-	display: flex;
-	margin-left: auto;
-}
-
-.contacts-icon {
+.header-contacts__icon {
 	margin-right: 10px;
 	fill: currentColor;
 }

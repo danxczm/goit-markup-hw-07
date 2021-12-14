@@ -1,4 +1,4 @@
-.projects-list {
+.projects__list {
 	display: flex;
 	flex-wrap: wrap;
 
@@ -6,13 +6,13 @@
 	margin-top: -30px;
 }
 
-.projects-item {
+.projects__item {
 	flex-basis: calc(100% / 3 - 30px);
 	margin-left: 30px;
 	margin-top: 30px;
 }
 
-.projects-link {
+.projects__link {
 	display: block;
 	transition: box-shadow 250ms var(--cubic-value);
 	
@@ -23,43 +23,18 @@
 	}
 }
 
-.projects-wrap {
-	padding: 20px 24px;
-	border-left: 1px solid #eeeeee;
-	border-right: 1px solid #eeeeee;
-	border-bottom: 1px solid #eeeeee;
-}
-
-.projects-title {
-	margin-bottom: 4px;
-	color: var(--primary-text-color);
-	font-weight: 700;
-	font-size: 18px;
-	line-height: 2;
-	letter-spacing: 0.06em;
-}
-
-.projects-description {
-	color: var(--secondary-text-color);
-	font-size: 16px;
-	line-height: 1.87;
-	letter-spacing: 0.03em;
-}
-
-.projects-top-wrap {
+.projects-image__wrap {
 	position: relative;
 	overflow: hidden;
 }
 
-.projects-top-text {
+.projects-image__text {
 	position: absolute;
 	top: 0;
 	left: 0;
 
 	height: 100%;
-	font-size: 18px;
-	line-height: 1.5;
-	letter-spacing: 0.03em;
+	@include fonts(400, 18px, 1.5, 0.03em);
 	padding: 63px 24px;
 	color: var(--white-text-color);
 	background-color: var(--projects-bg-hover);
@@ -67,7 +42,26 @@
 	transform: translateY(100%);
 	transition: transform 250ms var(--cubic-value);
 
-	.projects-item:hover & {
+	.projects__item:hover & {
 		transform: translateY(0);
 	}
 }
+
+.projects-text__wrap {
+	padding: 20px 24px;
+	border-left: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.projects-text__title {
+	margin-bottom: 4px;
+	color: var(--primary-text-color);
+	@include fonts(700, 18px, 2, 0.06em);
+}
+
+.projects-text__description {
+	color: var(--secondary-text-color);
+	@include fonts(400, 16px, 1.87, 0.03em);
+}
+
