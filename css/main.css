@@ -46,11 +46,11 @@ img {
   height: auto;
 }
 
-.list {
+li {
   list-style: none;
 }
 
-.link {
+a {
   text-decoration: none;
 }
 
@@ -81,10 +81,20 @@ img {
   margin: -1px;
 }
 
-.clients__link, .socials__link, .we-make__description, .advantages__icon, .modal-policy, .hero-modal__close-button, .footer-subscribe__button, .footer-socials__link {
+.clients__link, .socials__link, .we-make__description, .advantages__icon, .modal-policy, .modal__close-button, .footer-subscribe__button, .footer-socials__link {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.section__title {
+  margin-bottom: 50px;
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-align: center;
 }
 
 /* ----------------NAV---------------- */
@@ -94,7 +104,7 @@ img {
   border-bottom-color: #ececec;
 }
 
-.header__wrap {
+.header__container {
   display: flex;
   align-items: center;
 }
@@ -104,11 +114,11 @@ img {
   align-items: center;
 }
 
-.header-logo--margin-right {
+.header__logo {
   margin-right: 93px;
 }
 
-.header-logo {
+.logo {
   color: var(--accent-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -117,19 +127,19 @@ img {
   letter-spacing: 0.03em;
 }
 
-.header-logo--black-half {
+.logo__black {
   color: #000000;
 }
 
-.header__list {
+.site-nav {
   display: flex;
 }
 
-.header__item:not(:last-child) {
+.site-nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header__link {
+.site-nav__link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -141,7 +151,7 @@ img {
   letter-spacing: 0.02em;
   transition: color 250ms var(--cubic-value);
 }
-.header__link::after {
+.site-nav__link::after {
   position: absolute;
   display: block;
   bottom: -1px;
@@ -154,18 +164,18 @@ img {
   transition: transform 250ms var(--cubic-value);
   transform-origin: left center;
 }
-.header__link:hover::after, .header__link:focus::after {
+.site-nav__link:hover::after, .site-nav__link:focus::after {
   transform: scaleX(1);
 }
-.header__link:hover, .header__link:focus {
+.site-nav__link:hover, .site-nav__link:focus {
   color: var(--accent-color);
 }
 
-.current {
+.site-nav__link--current {
   position: relative;
   color: var(--accent-color);
 }
-.current::before {
+.site-nav__link--current::before {
   position: absolute;
   display: block;
   bottom: -1px;
@@ -176,16 +186,16 @@ img {
   border-radius: 2px;
 }
 
-.header-contacts__list {
+.contacts {
   display: flex;
   margin-left: auto;
 }
 
-.header-contacts__item:not(:first-child) {
+.contacts__item:not(:first-child) {
   margin-left: 50px;
 }
 
-.header-contacts__link {
+.contacts__link {
   display: flex;
   align-items: center;
   padding-top: 32px;
@@ -197,11 +207,11 @@ img {
   letter-spacing: 0.02em;
   transition: color 250ms var(--cubic-value);
 }
-.header-contacts__link:hover, .header-contacts__link:focus {
+.contacts__link:hover, .contacts__link:focus {
   color: var(--accent-color);
 }
 
-.header-contacts__icon {
+.contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -406,7 +416,7 @@ img {
   background-color: var(--hover-accent-color);
 }
 
-.hero-backdrop {
+.backdrop {
   position: fixed;
   z-index: 1;
   top: 0;
@@ -417,7 +427,7 @@ img {
   transition: opacity 800ms var(--cubic-value), visibility 800ms var(--cubic-value);
 }
 
-.hero-modal {
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -430,7 +440,7 @@ img {
   transform: scale(1) translate(-50%, -50%);
 }
 
-.hero-modal__close-button {
+.modal__close-button {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -443,11 +453,11 @@ img {
   color: var(--accent-color);
   transition: fill 250ms var(--cubic-value);
 }
-.hero-modal__close-button:hover, .hero-modal__close-button:focus {
+.modal__close-button:hover, .modal__close-button:focus {
   fill: currentColor;
 }
 
-.hero-modal__title {
+.modal__title {
   display: block;
   margin-bottom: 12px;
   font-weight: 700;
@@ -457,20 +467,20 @@ img {
   color: var(--primary-text-color);
 }
 
-.hero-modal__wrap--bottom-margin {
+.modal-form__wrap {
   margin-bottom: 20px;
 }
 
-.hero-modal__form {
+.modal-form__user-info {
   position: relative;
   display: flex;
   flex-direction: column;
 }
-.hero-modal__form:not(:last-child) {
+.modal-form__user-info:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.hero-modal__label {
+.modal-form__label {
   display: block;
   text-align: left;
   margin-bottom: 4px;
@@ -481,7 +491,7 @@ img {
   color: var(--secondary-text-color);
 }
 
-.hero-modal__input {
+.modal-form__input {
   padding: 0;
   margin: 0;
   padding-left: 42px;
@@ -492,21 +502,21 @@ img {
   outline: none;
   transition: border-color 250ms var(--cubic-value);
 }
-.hero-modal__input:focus {
+.modal-form__input:focus {
   border-color: var(--accent-color);
 }
 
-.hero-modal__input-icon {
+.modal-form__input-icon {
   position: absolute;
   top: 50%;
   left: 12px;
   transition: fill 250ms var(--cubic-value);
 }
-.hero-modal__input:focus + .hero-modal__input-icon {
+.modal-form__input:focus + .modal-form__input-icon {
   fill: var(--accent-color);
 }
 
-.hero-modal__textarea {
+.modal-form__textarea {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
@@ -516,24 +526,24 @@ img {
   outline: none;
   transition: border-color 250ms var(--cubic-value);
 }
-.hero-modal__textarea:focus {
+.modal-form__textarea:focus {
   border-color: var(--accent-color);
 }
-.hero-modal__textarea::-moz-placeholder {
+.modal-form__textarea::-moz-placeholder {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.hero-modal__textarea:-ms-input-placeholder {
+.modal-form__textarea:-ms-input-placeholder {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.hero-modal__textarea::placeholder {
+.modal-form__textarea::placeholder {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
@@ -541,7 +551,7 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-policy--bottom-margin {
+.modal-policy {
   margin-bottom: 30px;
 }
 
@@ -568,7 +578,7 @@ img {
   fill: #ffffff;
 }
 
-.hero-modal-policy__check:checked + .modal-policy__label .modal-policy__icon-check {
+.modal-policy__check:checked + .modal-policy__label .modal-policy__icon-check {
   background-color: var(--accent-color);
   border: none;
   transition: background-color 250ms var(--cubic-value);
@@ -611,11 +621,11 @@ img {
 }
 
 /* ----------------ADVANTAGES---------------- */
-.advantages {
+.section--no-padding-bottom {
   padding-bottom: 0;
 }
 
-.advantages__list {
+.advantages {
   margin-left: -30px;
   margin-top: -30px;
   display: flex;
@@ -655,7 +665,7 @@ img {
 }
 
 /* ----------------WHAT CAN WE MAKE---------------- */
-.we-make__list {
+.we-make {
   display: flex;
 }
 
@@ -664,16 +674,6 @@ img {
 }
 .we-make__item:not(:last-child) {
   margin-right: 30px;
-}
-
-.we-make__title {
-  margin-bottom: 50px;
-  color: var(--primary-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-  text-align: center;
 }
 
 .we-make__description {
@@ -692,34 +692,24 @@ img {
 }
 
 /* ----------------TEAM---------------- */
-.team {
+.section--team-background {
   background-color: var(--secondary-bg-color);
 }
 
-.team__title {
-  margin-bottom: 50px;
-  color: var(--primary-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-  text-align: center;
-}
-
-.team-list {
+.team {
   display: flex;
   flex-wrap: wrap;
 }
 
-.team-list__item {
+.team__item {
   box-shadow: var(--card-shadow);
   border-radius: 0px 0px 4px 4px;
 }
-.team-list__item:not(:last-child) {
+.team__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.team-list__wrap {
+.team__wrap {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: var(--wite-bg-color);
@@ -727,7 +717,7 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-list__title {
+.team__title {
   margin-bottom: 10px;
   color: var(--primary-text-color);
   font-weight: 500;
@@ -736,7 +726,7 @@ img {
   letter-spacing: 0.03em;
 }
 
-.team-list__description {
+.team__description {
   margin-bottom: 16px;
   color: var(--secondary-text-color);
   font-weight: 400;
@@ -776,17 +766,7 @@ img {
 }
 
 /* ----------------CLIENTS---------------- */
-.clients__title {
-  margin-bottom: 50px;
-  color: var(--primary-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-  text-align: center;
-}
-
-.clients__list {
+.clients {
   display: flex;
 }
 
@@ -813,20 +793,20 @@ img {
 
 /* ----------------"Портфолио" page CSS---------------- */
 /* ----------------FILTER NAVIGATION---------------- */
-.filter-nav--bottom-margin {
+.filter--bottom-margin {
   margin-bottom: 50px;
 }
 
-.filter-nav__list {
+.filter {
   display: flex;
   justify-content: center;
 }
 
-.filter-nav__item:not(:last-child) {
+.filter__item:not(:last-child) {
   margin-right: 8px;
 }
 
-.filter-nav__buttons {
+.filter__buttons {
   padding: 6px 22px;
   background-color: var(--secondary-bg-color);
   color: var(--primary-text-color);
@@ -839,14 +819,14 @@ img {
   cursor: pointer;
   transition: color 250ms var(--cubic-value), background-color 250ms var(--cubic-value), box-shadow 250ms var(--cubic-value);
 }
-.filter-nav__buttons:hover, .filter-nav__buttons:focus {
+.filter__buttons:hover, .filter__buttons:focus {
   background-color: var(--accent-color);
   color: var(--white-text-color);
   box-shadow: var(--hover-shadow);
 }
 
 /* ----------------PROJECTS---------------- */
-.projects__list {
+.projects {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
@@ -868,12 +848,12 @@ img {
   transform: translateY(0);
 }
 
-.projects-image__wrap {
+.projects__wrap {
   position: relative;
   overflow: hidden;
 }
 
-.projects-image__text {
+.projects__text {
   position: absolute;
   top: 0;
   left: 0;
@@ -888,18 +868,18 @@ img {
   transform: translateY(100%);
   transition: transform 250ms var(--cubic-value);
 }
-.projects__item:hover .projects-image__text {
+.projects__item:hover .projects__text {
   transform: translateY(0);
 }
 
-.projects-text__wrap {
+.projects__thumb {
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
 }
 
-.projects-text__title {
+.projects__title {
   margin-bottom: 4px;
   color: var(--primary-text-color);
   font-weight: 700;
@@ -908,7 +888,7 @@ img {
   letter-spacing: 0.06em;
 }
 
-.projects-text__description {
+.projects__description {
   color: var(--secondary-text-color);
   font-weight: 400;
   font-size: 16px;

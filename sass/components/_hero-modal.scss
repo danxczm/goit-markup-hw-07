@@ -1,4 +1,4 @@
-.hero-backdrop {
+.backdrop {
 	position: fixed;
 	z-index: 1;
 
@@ -10,7 +10,7 @@
 	transition: opacity 800ms var(--cubic-value), visibility 800ms var(--cubic-value);
 }
 
-.hero-modal {
+.modal {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -26,7 +26,7 @@
 	transform: scale(1) translate(-50%, -50%);
 }
 
-.hero-modal__close-button {
+.modal__close-button {
 	position: absolute;
 	top: 8px;
 	right: 8px;
@@ -49,7 +49,7 @@
 	}
 }
 
-.hero-modal__title {
+.modal__title {
 	display: block;
 	margin-bottom: 12px;
 
@@ -57,11 +57,11 @@
 	color: var(--primary-text-color);
 }
 
-.hero-modal__wrap--bottom-margin {
+.modal-form__wrap {
 	margin-bottom: 20px;
 }
 
-.hero-modal__form {
+.modal-form__user-info {
 	position: relative;
 
 	display: flex;
@@ -72,7 +72,7 @@
 	}
 }
 
-.hero-modal__label {
+.modal-form__label {
 	display: block;
 	text-align: left;
 	margin-bottom: 4px;
@@ -81,7 +81,7 @@
 	color: var(--secondary-text-color);
 }
 
-.hero-modal__input {
+.modal-form__input {
 	padding: 0;
 	margin: 0;
 
@@ -100,18 +100,18 @@
 	}
 }
 
-.hero-modal__input-icon {
+.modal-form__input-icon {
 	position: absolute;
 	top: 50%;
 	left: 12px;
 	transition: fill 250ms var(--cubic-value);
 
-	.hero-modal__input:focus + & {
+	.modal-form__input:focus + & {
 		fill: var(--accent-color);
 	}
 }
 
-.hero-modal__textarea {
+.modal-form__textarea {
 	width: 100%;
 	height: 120px;
 
@@ -136,9 +136,6 @@
 
 .modal-policy {
 	@extend %stance-list;
-}
-
-.modal-policy--bottom-margin {
 	margin-bottom: 30px;
 }
 
@@ -165,7 +162,7 @@
 	fill: #ffffff;
 }
 
-.hero-modal-policy__check:checked + .modal-policy__label .modal-policy__icon-check {
+.modal-policy__check:checked + .modal-policy__label .modal-policy__icon-check {
 	background-color: var(--accent-color);
 	border: none;
 	transition: background-color 250ms var(--cubic-value);
